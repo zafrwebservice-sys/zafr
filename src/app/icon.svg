@@ -1,0 +1,31 @@
+<svg viewBox="0 0 170 150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4bd7f" />
+      <stop offset="50%" stop-color="#c0a969" />
+      <stop offset="100%" stop-color="#a38a47" />
+    </linearGradient>
+  </defs>
+
+  <!-- LOGO ICON -->
+  <g transform="translate(0, 0)">
+    <!-- Left shape -->
+    <path d="M 0 30 
+             Q 40 45 55 75 
+             Q 40 105 0 120 
+             L 30 150 
+             Q 80 110 95 75 
+             Q 80 40 30 0 Z" fill="url(#gold)" />
+             
+    <!-- Right shape -->
+    <path d="M 170 30 
+             Q 130 45 115 75 
+             Q 130 105 170 120 
+             L 140 150 
+             Q 90 110 75 75 
+             Q 90 40 140 0 Z" fill="url(#gold)" />
+             
+    <!-- Arrow cutout in negative space (center) -->
+    <polygon points="65,60 95,75 65,90 65,80 45,80 45,70 65,70" fill="#ffffff" />
+  </g>
+</svg>
