@@ -16,12 +16,11 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
     });
 
     tl.fromTo(".loader-logo", 
-      { y: 30, opacity: 0, scale: 0.95 }, 
-      { y: 0, opacity: 1, scale: 1, duration: 1.2, ease: "power3.out" }
+      { opacity: 0, scale: 0.95 }, 
+      { opacity: 1, scale: 1, duration: 0.5, ease: "power3.out" }
     )
-    .to(".loader-progress", { scaleX: 1, duration: 1.5, ease: "power2.inOut" }, "-=0.5")
-    .to(".loader-logo-wrapper", { opacity: 0, y: -20, duration: 0.8, ease: "power3.in" }, "+=0.2")
-    .to(".loader-container", { yPercent: -100, duration: 1.2, ease: "power4.inOut" }, "-=0.4");
+    .to(".loader-logo-wrapper", { opacity: 0, scale: 1.05, duration: 0.4, ease: "power3.in" }, "+=0.3")
+    .to(".loader-container", { yPercent: -100, duration: 0.8, ease: "power4.inOut" }, "-=0.2");
 
     return () => { tl.kill(); };
   }, [onComplete]);
@@ -39,9 +38,6 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
             className="object-contain"
             priority
           />
-        </div>
-        <div className="w-48 h-[1px] bg-white/5 relative overflow-hidden">
-          <div className="loader-progress absolute inset-0 bg-gold origin-left scale-x-0"></div>
         </div>
       </div>
     </div>

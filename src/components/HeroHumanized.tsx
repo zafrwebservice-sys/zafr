@@ -66,10 +66,10 @@ export default function HeroHumanized() {
   }, []);
 
   return (
-    <section ref={heroRef} id="home" className="relative w-full h-screen overflow-hidden bg-charcoal">
+    <section ref={heroRef} id="home" className="relative w-full h-screen overflow-hidden bg-charcoal bg-[url('/hero-port.jpg')] bg-cover bg-center">
       
       {/* YouTube Background Video */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0 bg-charcoal">
+      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0 bg-charcoal/20">
         <div className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 scale-[1.15] opacity-80">
           <ReactPlayer
             url="https://www.youtube.com/watch?v=wQMx7wc4jh8"
