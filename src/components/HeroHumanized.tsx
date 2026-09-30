@@ -26,6 +26,7 @@ const slides = [
 
 export default function HeroHumanized() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVideoReady, setIsVideoReady] = useState(false);
   const heroRef = useRef<HTMLElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
 
@@ -70,7 +71,7 @@ export default function HeroHumanized() {
       
       {/* YouTube Background Video */}
       <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0 bg-charcoal">
-        <div className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 opacity-80">
+        <div className={`absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 scale-[1.15] transition-opacity duration-[2000ms] ease-in-out ${isVideoReady ? 'opacity-80' : 'opacity-0'}`}>
           <ReactPlayer
             url="https://www.youtube.com/watch?v=wQMx7wc4jh8"
             playing={true}
@@ -79,6 +80,8 @@ export default function HeroHumanized() {
             controls={false}
             width="100%"
             height="100%"
+            onReady={() => setIsVideoReady(true)}
+            onStart={() => setIsVideoReady(true)}
             // @ts-ignore - Bypass strict ReactPlayer type definitions for YouTube config
             config={{
               youtube: {
@@ -88,7 +91,11 @@ export default function HeroHumanized() {
                   rel: 0, 
                   modestbranding: 1, 
                   playsinline: 1,
-                  disablekb: 1
+                  disablekb: 1,
+                  controls: 0,
+                  iv_load_policy: 3,
+                  playlist: 'wQMx7wc4jh8',
+                  autohide: 1
                 }
               }
             }}
