@@ -1,0 +1,49 @@
+<svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4bd7f" />
+      <stop offset="50%" stop-color="#c0a969" />
+      <stop offset="100%" stop-color="#a38a47" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="250" fill="transparent" />
+
+  <!-- LOGO ICON -->
+  <g transform="translate(40, 40) scale(1.1)">
+    <!-- Left shape -->
+    <path d="M 0 30 
+             Q 40 45 55 75 
+             Q 40 105 0 120 
+             L 30 150 
+             Q 80 110 95 75 
+             Q 80 40 30 0 Z" fill="url(#gold)" />
+             
+    <!-- Right shape -->
+    <path d="M 170 30 
+             Q 130 45 115 75 
+             Q 130 105 170 120 
+             L 140 150 
+             Q 90 110 75 75 
+             Q 90 40 140 0 Z" fill="url(#gold)" />
+             
+    <!-- Arrow cutout in negative space (center) -->
+    <!-- Actually, the left and right shapes create the arrow implicitly, but let's force an arrow shape to overlap and cut them out by matching background color -->
+    <polygon points="65,60 95,75 65,90 65,80 45,80 45,70 65,70" fill="var(--background, #121413)" />
+  </g>
+
+  <!-- LOGO TEXT -->
+  <g transform="translate(250, 105)">
+    <!-- ZAFR -->
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="90" fill="url(#gold)" letter-spacing="2">Z<tspan font-family="Arial, Helvetica, sans-serif">Λ</tspan>FR</text>
+    
+    <!-- Background bar for Global Exports -->
+    <rect x="0" y="25" width="450" height="35" fill="url(#gold)" />
+    
+    <!-- Global Exports -->
+    <text x="225" y="50" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="20" fill="#121413" letter-spacing="4" text-anchor="middle">Global Exports</text>
+    
+    <!-- Slogan -->
+    <text x="225" y="85" font-family="Georgia, serif" font-size="14" fill="url(#gold)" text-anchor="middle">Rooted in Quality. Trusted Worldwide. Value Delivered</text>
+  </g>
+</svg>

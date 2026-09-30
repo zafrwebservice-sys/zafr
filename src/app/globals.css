@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #121413;
+  --color-charcoal-light: #1c1e1d;
+  --color-forest: #1A3B2B;
+  --color-ivory: #F5F3E9;
+  --color-gold: #c0a969;
+  --color-gold-light: #d4bd7f;
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: #121413;
+    --foreground: #F5F3E9;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #121413;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1c1e1d;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c0a969;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .clip-path-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .writing-vertical-rl {
+    writing-mode: vertical-rl;
+  }
+  .writing-horizontal-tb {
+    writing-mode: horizontal-tb;
+  }
+}
+
+/* Base styles to hide custom cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
