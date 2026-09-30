@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
+import ReactPlayer from "react-player";
 import { ArrowRight } from "lucide-react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -68,15 +69,33 @@ export default function HeroHumanized() {
     <section ref={heroRef} id="home" className="relative w-full h-screen overflow-hidden bg-charcoal">
       
       {/* YouTube Background Video */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
-        <iframe
-          src="https://www.youtube.com/embed/wQMx7wc4jh8?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&playlist=wQMx7wc4jh8&modestbranding=1&playsinline=1"
-          className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
-          allow="autoplay; encrypted-media; gyroscope; picture-in-picture"
-          frameBorder="0"
-        ></iframe>
+      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0 bg-charcoal">
+        <div className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 opacity-80">
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=wQMx7wc4jh8"
+            playing={true}
+            muted={true}
+            loop={true}
+            controls={false}
+            width="100%"
+            height="100%"
+            // @ts-ignore - Bypass strict ReactPlayer type definitions for YouTube config
+            config={{
+              youtube: {
+                // @ts-ignore
+                playerVars: { 
+                  showinfo: 0, 
+                  rel: 0, 
+                  modestbranding: 1, 
+                  playsinline: 1,
+                  disablekb: 1
+                }
+              }
+            }}
+          />
+        </div>
         {/* Dark overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-charcoal/50 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-charcoal/40 mix-blend-multiply"></div>
       </div>
 
       {/* Cinematic Gradient Overlays */}
