@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,17 +10,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const slides = [
   {
-    image: "/hero-port.jpg", // Farmer / Agriculture
     title: "Rooted in Quality.",
     subtitle: "Connecting premium agricultural products directly from the source to the world."
   },
   {
-    image: "/hero-spices.jpg", // Logistics workers / Harbor
     title: "Trusted Worldwide.",
     subtitle: "Built on absolute transparency, ethical practices, and long-term partnerships."
   },
   {
-    image: "/hero-network.jpg", // Business partnership / Trade
     title: "Value Delivered.",
     subtitle: "Seamless global supply chains powered by human dedication and reliable processes."
   }
@@ -31,42 +27,14 @@ export default function HeroHumanized() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const heroRef = useRef<HTMLElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
-  const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Premium Background slider logic using GSAP clip-path
+  // Text slider logic
   useEffect(() => {
-    let ctx = gsap.context(() => {}); // create context for cleanup
-    
     const interval = setInterval(() => {
-      const nextSlide = (currentSlide + 1) % slides.length;
-      const currentImg = imageRefs.current[currentSlide];
-      const nextImg = imageRefs.current[nextSlide];
-
-      if (currentImg && nextImg) {
-        ctx.add(() => {
-          // Prepare next image
-          gsap.set(nextImg, { zIndex: 1, clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)" });
-          
-          // Animate next image wiping in from bottom
-          gsap.to(nextImg, {
-            clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)",
-            duration: 1.5,
-            ease: "power3.inOut",
-          });
-
-          // Move current image back
-          gsap.set(currentImg, { zIndex: 0 });
-        });
-      }
-      
-      setCurrentSlide(nextSlide);
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000); // 6 seconds per slide
-
-    return () => {
-      clearInterval(interval);
-      ctx.revert();
-    };
-  }, [currentSlide]);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -99,27 +67,17 @@ export default function HeroHumanized() {
   return (
     <section ref={heroRef} id="home" className="relative w-full h-screen overflow-hidden bg-charcoal">
       
-      {/* Background Images with Premium Clip-Path Reveal */}
-      {slides.map((slide, index) => (
-        <div 
-          key={index} 
-          ref={el => { imageRefs.current[index] = el }}
-          className="absolute inset-0 w-full h-full"
-          style={{ 
-            zIndex: index === 0 ? 1 : 0, 
-            clipPath: index === 0 ? "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)" : "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"
-          }}
-        >
-          <div className="absolute inset-0 bg-charcoal/50 z-10 mix-blend-multiply"></div>
-          <Image 
-            src={slide.image}
-            alt={slide.title}
-            fill
-            priority={index === 0}
-            className={`object-cover transform transition-transform duration-[10000ms] ease-out ${index === currentSlide ? 'scale-110' : 'scale-100'}`}
-          />
-        </div>
-      ))}
+      {/* YouTube Background Video */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
+        <iframe
+          src="https://www.youtube.com/embed/wQMx7wc4jh8?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&playlist=wQMx7wc4jh8&modestbranding=1&playsinline=1"
+          className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
+          allow="autoplay; encrypted-media; gyroscope; picture-in-picture"
+          frameBorder="0"
+        ></iframe>
+        {/* Dark overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-charcoal/50 mix-blend-multiply"></div>
+      </div>
 
       {/* Cinematic Gradient Overlays */}
       <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-charcoal/90 via-charcoal/40 to-transparent"></div>
@@ -176,7 +134,7 @@ export default function HeroHumanized() {
       {/* Slider Progress Bar */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-white/5 z-20">
          <div 
-           className="h-full bg-gold transition-all duration-[6000ms] ease-linear"
+           className="h-full bg-forest transition-all duration-[6000ms] ease-linear"
            style={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
          ></div>
       </div>
