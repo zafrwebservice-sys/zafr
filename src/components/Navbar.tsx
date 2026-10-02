@@ -37,7 +37,7 @@ export default function Navbar() {
         )}
       >
         <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
-          <Link href="#home" className="flex items-center group">
+          <Link href="#home" className={`flex items-center group transition-opacity duration-500 ${scrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
             <Image 
               src="/logo-exact.png" 
               alt="ZAFR Global Exports" 
