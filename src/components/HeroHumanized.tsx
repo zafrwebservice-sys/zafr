@@ -96,7 +96,7 @@ export default function HeroHumanized() {
         <div ref={textRef} className="max-w-4xl mt-24 md:mt-0 md:pl-8">
           
           {/* Massive Hero Logo */}
-          <div className="hero-stagger mb-12 relative w-[350px] md:w-[700px] lg:w-[900px] xl:w-[1000px] h-[140px] md:h-[240px] lg:h-[320px] xl:h-[360px]">
+          <div className="hero-stagger mb-8 relative w-[300px] md:w-[500px] lg:w-[650px] xl:w-[750px] h-[100px] md:h-[160px] lg:h-[220px] xl:h-[260px]">
             <Image 
               src="/logo-exact.png" 
               alt="ZAFR Global Exports" 
@@ -106,14 +106,14 @@ export default function HeroHumanized() {
             />
           </div>
 
-          <div className="hero-stagger h-[180px] md:h-[260px] lg:h-[300px] relative mb-6">
+          <div className="hero-stagger h-[140px] md:h-[200px] lg:h-[240px] relative mb-4">
              {slides.map((slide, index) => (
                <h1 
                  key={`title-${index}`} 
-                 className={`absolute top-0 left-0 text-5xl md:text-7xl lg:text-8xl font-bold font-sans text-white leading-[1.1] max-w-4xl tracking-tight transition-all duration-1000 ease-in-out uppercase ${index === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'}`}
+                 className={`absolute top-0 left-0 text-4xl md:text-6xl lg:text-7xl font-bold font-sans text-white leading-[1.1] max-w-4xl tracking-tight transition-all duration-1000 ease-in-out uppercase ${index === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'}`}
                >
                  {slide.title.split('.')[0]}<span className="text-forest font-bold">.</span><br />
-                 <span className="text-3xl md:text-5xl lg:text-6xl text-white/90">{index === 0 ? "Trusted Worldwide." : index === 1 ? "Built on Partnerships." : "Rooted in Quality."}</span>
+                 <span className="text-2xl md:text-4xl lg:text-5xl text-white/90">{index === 0 ? "Trusted Worldwide." : index === 1 ? "Built on Partnerships." : "Rooted in Quality."}</span>
                </h1>
              ))}
           </div>
