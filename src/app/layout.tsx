@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${montserrat.variable} font-sans bg-white text-charcoal antialiased overflow-x-hidden`}
+        className={`${inter.variable} ${montserrat.variable} font-sans bg-creme text-charcoal antialiased overflow-x-hidden`}
       >
         <SmoothScroll>
           <Navbar />

@@ -31,10 +31,10 @@ export default function VisionMission() {
   }, []);
 
   return (
-    <section id="vision" ref={sectionRef} className="py-24 md:py-32 bg-white text-charcoal relative border-t border-charcoal/10">
+    <section id="vision" ref={sectionRef} className="py-24 md:py-32 bg-creme text-charcoal relative border-t border-charcoal/10">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
-          <div className="vision-item bg-[#fcfaf5] p-10 md:p-14 border border-charcoal/10">
+          <div className="vision-item bg-white p-10 md:p-14 border border-charcoal/10">
             <div className="flex items-center gap-4 mb-8">
               <span className="w-12 h-[2px] bg-forest block"></span>
               <span className="text-forest uppercase tracking-widest text-sm font-bold">Our Vision</span>
@@ -47,7 +47,7 @@ export default function VisionMission() {
             </p>
           </div>
 
-          <div className="vision-item bg-[#fcfaf5] p-10 md:p-14 border border-charcoal/10">
+          <div className="vision-item bg-white p-10 md:p-14 border border-charcoal/10">
             <div className="flex items-center gap-4 mb-8">
               <span className="w-12 h-[2px] bg-forest block"></span>
               <span className="text-forest uppercase tracking-widest text-sm font-bold">Our Mission</span>

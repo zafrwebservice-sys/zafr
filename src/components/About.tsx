@@ -84,7 +84,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" ref={sectionRef} className="py-24 md:py-32 bg-white text-charcoal relative z-10">
+    <section id="about" ref={sectionRef} className="py-24 md:py-32 bg-creme text-charcoal relative z-10">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center mb-32">
           <div>

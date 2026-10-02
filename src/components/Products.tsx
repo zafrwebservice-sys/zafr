@@ -40,7 +40,7 @@ export default function Products() {
   }, []);
 
   return (
-    <section id="products" ref={containerRef} className="bg-[#fcfaf5] text-charcoal relative z-10 pt-24 pb-24 border-t border-charcoal/5">
+    <section id="products" ref={containerRef} className="bg-creme text-charcoal relative z-10 pt-24 pb-24 border-t border-charcoal/5">
       
       {/* Header */}
       <div className="container mx-auto px-6 md:px-12 mb-20 text-center">

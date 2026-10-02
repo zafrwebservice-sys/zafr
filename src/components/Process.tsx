@@ -40,7 +40,7 @@ export default function Process() {
   }, []);
 
   return (
-    <section id="process-section" className="h-screen bg-white text-charcoal flex flex-col justify-center overflow-hidden border-t border-charcoal/10">
+    <section id="process-section" className="h-screen bg-creme text-charcoal flex flex-col justify-center overflow-hidden border-t border-charcoal/10">
       <div className="container mx-auto px-6 md:px-12 mb-16">
         <h2 className="text-4xl md:text-5xl font-bold font-sans uppercase mb-4">Our Export Process</h2>
         <p className="text-charcoal/70 max-w-xl font-medium">A systematic, transparent approach to international trade ensuring reliability at every step.</p>

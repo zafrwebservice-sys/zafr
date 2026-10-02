@@ -34,7 +34,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-white text-charcoal relative z-10">
+    <section id="contact" className="py-24 md:py-32 bg-creme text-charcoal relative z-10">
       <div className="container mx-auto px-6 md:px-12 mb-24">
         <div className="max-w-3xl mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 leading-tight">
