@@ -30,7 +30,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
   return (
     <div className="loader-container fixed inset-0 z-[1000] bg-charcoal flex flex-col items-center justify-center pointer-events-none">
       <div className="loader-logo-wrapper flex flex-col items-center">
-        <div className="loader-logo mb-10 relative w-96 h-36 overflow-hidden">
+        <div className="loader-logo mb-10 relative w-[360px] md:w-[650px] h-[140px] md:h-[220px] overflow-hidden">
           <Image 
             src="/logo-exact.png" 
             alt="ZAFR Global Exports" 
