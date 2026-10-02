@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -92,9 +93,20 @@ export default function HeroHumanized() {
 
       {/* Foreground Content */}
       <div className="relative z-20 w-full h-full flex flex-col justify-center container mx-auto px-6 md:px-12 pointer-events-none">
-        <div ref={textRef} className="max-w-4xl mt-32 md:mt-0 md:pl-8">
+        <div ref={textRef} className="max-w-4xl mt-24 md:mt-0 md:pl-8">
           
-          <div className="hero-stagger h-[180px] md:h-[260px] lg:h-[300px] relative mb-6 mt-16">
+          {/* Massive Hero Logo */}
+          <div className="hero-stagger mb-12 relative w-[300px] md:w-[550px] lg:w-[700px] h-[100px] md:h-[180px] lg:h-[240px]">
+            <Image 
+              src="/logo-exact.png" 
+              alt="ZAFR Global Exports" 
+              fill 
+              className="object-contain object-left drop-shadow-2xl"
+              priority
+            />
+          </div>
+
+          <div className="hero-stagger h-[180px] md:h-[260px] lg:h-[300px] relative mb-6">
              {slides.map((slide, index) => (
                <h1 
                  key={`title-${index}`} 
