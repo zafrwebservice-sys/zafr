@@ -41,9 +41,9 @@ export default function Navbar() {
             <Image 
               src="/logo-exact.png" 
               alt="ZAFR Global Exports" 
-              width={260} 
-              height={80} 
-              className="h-12 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
+              width={400} 
+              height={140} 
+              className="h-20 md:h-28 w-auto object-contain transition-transform group-hover:scale-105"
             />
           </Link>
 

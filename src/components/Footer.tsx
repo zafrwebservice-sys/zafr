@@ -12,9 +12,9 @@ export default function Footer() {
               <Image 
                 src="/logo-exact.png" 
                 alt="ZAFR Global Exports" 
-                width={260} 
-                height={80} 
-                className="h-14 w-auto object-contain hover:opacity-80 transition-opacity"
+                width={400} 
+                height={140} 
+                className="h-20 w-auto object-contain hover:opacity-80 transition-opacity"
               />
             </Link>
             <p className="text-white/60 text-sm max-w-sm font-medium">
