@@ -9,15 +9,15 @@ import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 const agricultureProducts = [
-  { name: "Coconut & Derivatives", desc: "Naturally sourced coconuts, powder, and oil selected for quality, freshness, and international supply.", img: "/coconuts.jpg" },
-  { name: "Indian Spices", desc: "Authentic Indian spices sourced for aroma, flavour, consistency, and dependable supply.", img: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop" },
-  { name: "Coffee Products", desc: "Selected Indian coffee products prepared for quality-conscious international markets.", img: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071&auto=format&fit=crop" },
-  { name: "Fresh Produce", desc: "Fresh fruits and vegetables sourced directly from trusted agricultural networks.", img: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=2070&auto=format&fit=crop" },
+  { name: "Coconut & Derivatives", desc: "Naturally sourced coconuts, powder, and oil selected for quality, freshness, and international supply.", img: "https://images.unsplash.com/photo-1595822363989-105dfd0c75c3?q=80&w=2000&auto=format&fit=crop" },
+  { name: "Indian Spices", desc: "Authentic Indian spices sourced for aroma, flavour, consistency, and dependable supply.", img: "https://images.unsplash.com/photo-1599909696950-c6507850ee8f?q=80&w=2000&auto=format&fit=crop" },
+  { name: "Coffee Products", desc: "Selected Indian coffee products prepared for quality-conscious international markets.", img: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=2000&auto=format&fit=crop" },
+  { name: "Fresh Produce", desc: "Fresh fruits and vegetables sourced directly from trusted agricultural networks.", img: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2000&auto=format&fit=crop" },
 ];
 
 const industrialProducts = [
-  { name: "Construction Materials", desc: "Concrete blocks, cement, and steel reinforcement for international construction requirements.", img: "/construction.jpg" },
-  { name: "Industrial Spare Parts", desc: "Quality spare parts sourced for reliability and industrial consistency.", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" },
+  { name: "Construction Materials", desc: "Concrete blocks, cement, and steel reinforcement for international construction requirements.", img: "https://images.unsplash.com/photo-1541888087405-181cb2657e4e?q=80&w=2000&auto=format&fit=crop" },
+  { name: "Industrial Spare Parts", desc: "Quality spare parts sourced for reliability and industrial consistency.", img: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2000&auto=format&fit=crop" },
 ];
 
 export default function Products() {
@@ -86,9 +86,6 @@ function ProductCard({ product }: { product: any }) {
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-charcoal/10 group-hover:bg-transparent transition-colors duration-500"></div>
-        <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-bold text-forest uppercase tracking-widest border border-forest/20">
-          India Origin
-        </div>
       </div>
       <div className="p-8 relative">
         <div className="absolute top-0 left-0 w-0 h-[2px] bg-forest transition-all duration-500 group-hover:w-full"></div>
