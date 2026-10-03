@@ -9,7 +9,7 @@ import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 const agricultureProducts = [
-  { name: "Coconut & Derivatives", desc: "Naturally sourced coconuts, powder, and oil selected for quality, freshness, and international supply.", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyo8OhJaRa61WC2yvwG-_gcrEXmptAKeb0bTExU4EW_Q&s=10" },
+  { name: "Coconut & Derivatives", desc: "Naturally sourced coconuts, powder, and oil selected for quality, freshness, and international supply.", img: "https://static.vecteezy.com/system/resources/previews/068/334/019/large_2x/bottle-of-coconut-oil-with-coconuts-on-a-tropical-beach-background-photo.jpg" },
   { name: "Indian Spices", desc: "Authentic Indian spices sourced for aroma, flavour, consistency, and dependable supply.", img: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop" },
   { name: "Coffee Products", desc: "Selected Indian coffee products prepared for quality-conscious international markets.", img: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071&auto=format&fit=crop" },
   { name: "Fresh Produce", desc: "Fresh fruits and vegetables sourced directly from trusted agricultural networks.", img: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=2070&auto=format&fit=crop" },
