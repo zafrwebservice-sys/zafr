@@ -93,20 +93,21 @@ export default function HeroHumanized() {
 
       {/* Foreground Content */}
       <div className="relative z-20 w-full h-full flex flex-col justify-center container mx-auto px-6 md:px-12 pointer-events-none">
-        <div ref={textRef} className="max-w-4xl mt-24 md:mt-0 md:pl-8">
+        <div ref={textRef} className="max-w-4xl w-full">
           
-          {/* Massive Hero Logo */}
-          <div className="hero-stagger mb-8 relative w-full max-w-[340px] sm:max-w-[420px] md:max-w-[500px] lg:max-w-[650px] xl:max-w-[750px] h-[120px] sm:h-[150px] md:h-[160px] lg:h-[220px] xl:h-[260px]">
+          {/* Massive Hero Logo (Natural Aspect Ratio) */}
+          <div className="hero-stagger mb-6 w-full max-w-[320px] sm:max-w-[420px] md:max-w-[500px] lg:max-w-[650px] xl:max-w-[750px]">
             <Image 
               src="/logo-exact.png" 
               alt="ZAFR Global Exports" 
-              fill 
-              className="object-contain object-left drop-shadow-2xl"
+              width={1000}
+              height={300}
+              className="w-full h-auto object-contain drop-shadow-2xl"
               priority
             />
           </div>
 
-          <div className="hero-stagger h-[140px] md:h-[200px] lg:h-[240px] relative mb-4">
+          <div className="hero-stagger relative h-[100px] md:h-[140px] lg:h-[180px] mb-4">
              {slides.map((slide, index) => (
                <h1 
                  key={`title-${index}`} 
@@ -118,7 +119,7 @@ export default function HeroHumanized() {
              ))}
           </div>
           
-          <div className="hero-stagger relative h-28 md:h-20 mb-12">
+          <div className="hero-stagger relative h-20 md:h-16 mb-10">
              {slides.map((slide, index) => (
                <p 
                  key={`subtitle-${index}`} 
@@ -129,10 +130,10 @@ export default function HeroHumanized() {
              ))}
           </div>
           
-          <div className="hero-stagger flex flex-wrap items-center gap-8 pointer-events-auto">
+          <div className="hero-stagger flex flex-wrap items-center gap-6 pointer-events-auto">
             <a 
               href="#products" 
-              className="group relative px-10 py-4 bg-forest text-white font-bold tracking-wide uppercase text-xs overflow-hidden transition-all hover:bg-forest/90"
+              className="group relative px-8 py-4 bg-forest text-white font-bold tracking-wide uppercase text-sm overflow-hidden transition-all hover:bg-forest/90"
             >
               <span className="relative z-10 flex items-center gap-3">
                 Explore Products
@@ -142,7 +143,7 @@ export default function HeroHumanized() {
             
             <a 
               href="#contact" 
-              className="px-8 py-4 border-b border-white/20 text-white uppercase tracking-widest text-xs font-bold hover:border-forest hover:text-forest transition-colors duration-300"
+              className="px-6 py-4 border-b border-white/20 text-white uppercase tracking-widest text-sm font-bold hover:border-forest hover:text-forest transition-colors duration-300"
             >
               Partner With Us
             </a>
