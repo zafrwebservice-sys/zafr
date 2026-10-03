@@ -20,6 +20,10 @@ const industrialProducts = [
   { name: "Industrial Spare Parts", desc: "Quality spare parts sourced for reliability and industrial consistency.", img: "https://static.vecteezy.com/system/resources/previews/049/606/362/non_2x/assorted-mechanical-parts-and-gears-on-a-workbench-industrial-engineering-and-machinery-components-photo.JPG" },
 ];
 
+const consumerProducts = [
+  { name: "FMCG Products", desc: "Fast-moving consumer goods, including packaged foods and retail-ready consumables, delivered globally.", img: "https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?q=80&w=2000&auto=format&fit=crop" }
+];
+
 export default function Products() {
   const containerRef = useRef<HTMLElement>(null);
 
@@ -53,7 +57,7 @@ export default function Products() {
       {/* Unified Product Grid */}
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[...agricultureProducts, ...industrialProducts].map((prod, i) => (
+          {[...agricultureProducts, ...industrialProducts, ...consumerProducts].map((prod, i) => (
             <ProductCard key={i} product={prod} />
           ))}
           
