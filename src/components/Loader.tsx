@@ -52,20 +52,21 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
 
   return (
     <div className="loader-container fixed inset-0 z-[1000] bg-charcoal flex flex-col items-center justify-center pointer-events-none">
-      <div className="loader-content flex flex-col items-center w-full max-w-xl px-8">
+      <div className="loader-content flex flex-col items-center w-full max-w-5xl px-6 md:px-12">
         
-        <div className="loader-logo mb-16 relative w-[360px] md:w-[600px] h-[140px] md:h-[200px] overflow-hidden">
+        <div className="loader-logo mb-12 w-full max-w-[380px] sm:max-w-[500px] md:max-w-[750px] lg:max-w-[900px]">
           <Image 
             src="/logo-exact.png" 
             alt="ZAFR Global Exports" 
-            fill 
-            className="object-contain"
+            width={1200}
+            height={400}
+            className="w-full h-auto object-contain drop-shadow-2xl"
             priority
           />
         </div>
 
         {/* Premium Progress Indicator */}
-        <div className="w-full flex flex-col items-center gap-4">
+        <div className="w-full max-w-[380px] sm:max-w-[500px] md:max-w-[750px] lg:max-w-[900px] flex flex-col items-center gap-4">
           <div className="w-full h-[2px] bg-white/10 relative overflow-hidden rounded-full">
             <div className="progress-bar absolute top-0 left-0 h-full bg-forest w-0 rounded-full"></div>
           </div>
