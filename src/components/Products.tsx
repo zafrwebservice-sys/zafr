@@ -17,7 +17,7 @@ const agricultureProducts = [
 
 const industrialProducts = [
   { name: "Construction Materials", desc: "Concrete blocks, cement, and steel reinforcement for international construction requirements.", img: "https://dhinwaconstruction.com/wp-content/uploads/2024/06/hsto.jpg.webp" },
-  { name: "Industrial Spare Parts", desc: "Quality spare parts sourced for reliability and industrial consistency.", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" },
+  { name: "Industrial Spare Parts", desc: "Quality spare parts sourced for reliability and industrial consistency.", img: "https://cpimg.tistatic.com/09210877/b/4/Industrial-Spare-Parts.jpg" },
 ];
 
 export default function Products() {

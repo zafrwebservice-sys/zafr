@@ -19,6 +19,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "dhinwaconstruction.com",
       },
+      {
+        protocol: "https",
+        hostname: "cpimg.tistatic.com",
+      },
     ],
   },
 };
