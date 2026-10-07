@@ -93,7 +93,7 @@ export default function HeroHumanized() {
 
       {/* Foreground Content */}
       <div className="relative z-20 w-full h-full flex flex-col justify-center container mx-auto px-6 md:px-12 pointer-events-none">
-        <div ref={textRef} className="max-w-4xl w-full">
+        <div ref={textRef} className="max-w-4xl w-full -mt-8 md:-mt-16 lg:-mt-24">
           
           {/* Properly Sized & Aligned Hero Logo */}
           <div className="hero-stagger mb-2 w-full max-w-[260px] sm:max-w-[340px] md:max-w-[450px] lg:max-w-[550px] xl:max-w-[600px]">
@@ -107,7 +107,7 @@ export default function HeroHumanized() {
             />
           </div>
 
-          <div className="hero-stagger relative h-[100px] md:h-[130px] lg:h-[160px] mb-6">
+          <div className="hero-stagger relative h-[90px] md:h-[130px] lg:h-[160px] mb-4">
              {slides.map((slide, index) => (
                <h1 
                  key={`title-${index}`} 
@@ -119,7 +119,7 @@ export default function HeroHumanized() {
              ))}
           </div>
           
-          <div className="hero-stagger relative h-20 md:h-16 mb-12">
+          <div className="hero-stagger relative h-20 md:h-16 mb-8">
              {slides.map((slide, index) => (
                <p 
                  key={`subtitle-${index}`} 
