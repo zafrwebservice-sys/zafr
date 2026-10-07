@@ -95,19 +95,19 @@ export default function HeroHumanized() {
       <div className="relative z-20 w-full h-full flex flex-col justify-center container mx-auto px-6 md:px-12 pointer-events-none">
         <div ref={textRef} className="max-w-4xl w-full">
           
-          {/* Massive Hero Logo (Natural Aspect Ratio) */}
-          <div className="hero-stagger mb-6 w-full max-w-[320px] sm:max-w-[420px] md:max-w-[500px] lg:max-w-[650px] xl:max-w-[750px]">
+          {/* Properly Sized & Aligned Hero Logo */}
+          <div className="hero-stagger mb-8 w-full max-w-[260px] sm:max-w-[340px] md:max-w-[450px] lg:max-w-[550px] xl:max-w-[600px]">
             <Image 
               src="/logo-exact.png" 
               alt="ZAFR Global Exports" 
               width={1000}
               height={300}
-              className="w-full h-auto object-contain drop-shadow-2xl"
+              className="w-full h-auto object-contain object-left drop-shadow-2xl"
               priority
             />
           </div>
 
-          <div className="hero-stagger relative h-[100px] md:h-[140px] lg:h-[180px] mb-4">
+          <div className="hero-stagger relative h-[100px] md:h-[130px] lg:h-[160px] mb-6">
              {slides.map((slide, index) => (
                <h1 
                  key={`title-${index}`} 
@@ -119,7 +119,7 @@ export default function HeroHumanized() {
              ))}
           </div>
           
-          <div className="hero-stagger relative h-20 md:h-16 mb-10">
+          <div className="hero-stagger relative h-20 md:h-16 mb-12">
              {slides.map((slide, index) => (
                <p 
                  key={`subtitle-${index}`} 
