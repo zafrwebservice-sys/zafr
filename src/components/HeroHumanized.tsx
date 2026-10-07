@@ -111,6 +111,7 @@ export default function HeroHumanized() {
              {slides.map((slide, index) => (
                <h1 
                  key={`title-${index}`} 
+                 aria-hidden={index !== currentSlide}
                  className={`absolute top-0 left-0 text-4xl md:text-6xl lg:text-7xl font-bold font-sans text-white leading-[1.1] max-w-4xl tracking-tight transition-all duration-1000 ease-in-out uppercase ${index === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'}`}
                >
                  {slide.title.split('.')[0]}<span className="text-forest font-bold">.</span><br />
@@ -123,6 +124,7 @@ export default function HeroHumanized() {
              {slides.map((slide, index) => (
                <p 
                  key={`subtitle-${index}`} 
+                 aria-hidden={index !== currentSlide}
                  className={`absolute top-0 left-0 text-lg md:text-xl text-white/80 max-w-xl font-medium leading-relaxed tracking-wide transition-all duration-1000 ease-in-out delay-100 ${index === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}
                >
                  {slide.subtitle}
