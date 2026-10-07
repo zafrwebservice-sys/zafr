@@ -18,7 +18,7 @@ const agricultureProducts = [
 
 const industrialProducts = [
   { name: "Construction Materials", desc: "Concrete blocks, cement, and steel reinforcement for international construction requirements.", img: "https://dhinwaconstruction.com/wp-content/uploads/2024/06/hsto.jpg.webp" },
-  { name: "Industrial Spare Parts", desc: "Quality spare parts sourced for reliability and industrial consistency.", img: "https://static.vecteezy.com/system/resources/previews/049/606/362/non_2x/assorted-mechanical-parts-and-gears-on-a-workbench-industrial-engineering-and-machinery-components-photo.JPG" },
+  { name: "Automotive Spare Parts", desc: "Quality automotive spare parts sourced for high performance, reliability, and consistency.", img: "https://static.vecteezy.com/system/resources/previews/049/606/362/non_2x/assorted-mechanical-parts-and-gears-on-a-workbench-industrial-engineering-and-machinery-components-photo.JPG" },
   { name: "Cement & AAC Blocks", desc: "High-quality cement and Autoclaved Aerated Concrete (AAC) blocks for durable, lightweight construction.", img: "/cement-aac-blocks.jpg" },
 ];
 
