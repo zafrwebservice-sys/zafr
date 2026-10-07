@@ -21,7 +21,7 @@ const industrialProducts = [
 ];
 
 const consumerProducts = [
-  { name: "FMCG Products", desc: "Fast-moving consumer goods, including packaged foods and retail-ready consumables, delivered globally.", img: "https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?q=80&w=2000&auto=format&fit=crop" }
+  { name: "FMCG Products", desc: "Fast-moving consumer goods, including packaged foods and retail-ready consumables, delivered globally.", img: "/fmcg-product.jpg" }
 ];
 
 export default function Products() {
