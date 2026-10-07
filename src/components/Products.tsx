@@ -13,6 +13,7 @@ const agricultureProducts = [
   { name: "Whole/crushed/ground spices & vegetable powder", desc: "Authentic Indian spices sourced for aroma, flavour, consistency, and dependable supply.", img: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop" },
   { name: "Coffee Products", desc: "Selected Indian coffee products prepared for quality-conscious international markets.", img: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071&auto=format&fit=crop" },
   { name: "Fresh Produce", desc: "Fresh fruits and vegetables sourced directly from trusted agricultural networks.", img: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=2070&auto=format&fit=crop" },
+  { name: "Banana Leaf", desc: "Premium quality, fresh banana leaves used for eco-friendly packaging and traditional culinary purposes.", img: "https://images.unsplash.com/photo-1595849657691-af1e18eccfe0?q=80&w=2000&auto=format&fit=crop" },
 ];
 
 const industrialProducts = [
