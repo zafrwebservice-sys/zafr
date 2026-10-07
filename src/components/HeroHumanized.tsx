@@ -96,7 +96,7 @@ export default function HeroHumanized() {
         <div ref={textRef} className="max-w-4xl w-full">
           
           {/* Properly Sized & Aligned Hero Logo */}
-          <div className="hero-stagger mb-8 w-full max-w-[260px] sm:max-w-[340px] md:max-w-[450px] lg:max-w-[550px] xl:max-w-[600px]">
+          <div className="hero-stagger mb-2 w-full max-w-[260px] sm:max-w-[340px] md:max-w-[450px] lg:max-w-[550px] xl:max-w-[600px]">
             <Image 
               src="/logo-exact.png" 
               alt="ZAFR Global Exports" 
